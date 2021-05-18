@@ -1,0 +1,129 @@
+@font-face{
+    font-family: "Iskry Regular";
+    src: url("./../CSS/Iskry-Regular.tff") format("opentype");
+    src: url("./../CSS/Iskry-Regular.woff") format("truetype");
+}
+@font-face {
+    font-family: "Iskry Regular";
+    font-weight: bold;
+    src: url("./../CSS/Iskry-Bold.tff") format("opentype");
+    src: url("./../CSS/Iskry-Bold.woff") format("trutype");
+}
+* {
+    margin: 0 auto;
+    padding: 0;
+    font-family: "Iskry Regular";
+    font-weight: 500;
+}
+.nav-top {
+    width: 100%;
+    height: 35vh;
+    transform: translateY(-70%);
+    transition: transform 0.4s ease-out;
+    position:fixed;
+    top: 0;
+    z-index: 100;
+}
+.nav-top-mobile {
+    transform: translateY(0%);
+    transition: transform 0.4s ease-out;
+}
+.menu-nav {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: rgb(248,240,225);
+}
+.nav-link{
+    opacity: 0;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
+.nav-link a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15vw;
+    height: 3.3vh;
+    color: gray;
+}
+.nav-link p::before, .nav-link p::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    width: 10px;
+    background-color: gray;
+    margin: 4px;
+}
+@keyframes navSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes navSlideOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+}
+.text-nav {
+    color: gray;
+    border-radius: 1%;
+}
+.text-nav p{
+    font-size: 1.6rem;
+    padding: 0.4vh, 0.4vh, 0, 0.4vh;
+    margin: 0.4vh 0.4vh 0 0.4vh;
+    display: inline-block;
+}
+.text-nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+    width:15vw;
+    background-color:rgb(248,240,225);
+}
+#arrows-nav {
+    width: 27px;
+    height: 24px;
+    cursor: pointer;
+    background-color: rgb(248,240,225);
+    border-radius: 10%;
+    position: relative;
+    top: -2px;
+}
+.arrow-nav { 
+    width: 20px;
+    height: 3px;
+    background-color: rgba(128, 128, 128, 0.7);
+    position: relative;
+    transition: transform 0.5s ease-out;
+}
+.one-nav {
+    transform: rotate(55deg);
+    top:13px;
+    left: -5px;
+}
+.one-nav-mobile{
+    transform: rotate(-55deg);
+}
+.two-nav{
+    transform: rotate(-55deg);
+    top: 10px;
+    right: -5px;
+}
+.two-nav-mobile{
+    transform: rotate(55deg);
+}

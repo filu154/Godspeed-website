@@ -1,0 +1,98 @@
+.artists-links-wrapper {
+    width: 100%;
+    height: 55vh;
+}
+
+.artists-links {
+    width: 100;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.artist{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.artist img { 
+    width: auto;
+    height: 100%;
+}
+
+.nume-artist-link {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: background-color 400ms linear;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.artist:hover .nume-artist-link{
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.artist:hover .nume-artist-tattoo{
+    transform: translateY(0);
+    opacity: 1;
+}
+.artist:hover .link-portofolio {
+    opacity: 1;
+    transform: translateY(0);
+    border-bottom: 4px solid white;
+}
+/*.artist:hover .link-portofolio p{
+    border-bottom: 2px solid white;
+}*/
+
+.nume-artist-tattoo {
+    color: white;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10px);
+    transition: transform 300ms linear, opacity 300ms linear;
+    opacity: 0;
+}
+.nume-artist-tattoo p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 8px;
+}
+.nume-artist {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.link-portofolio {
+    font-size: 0.8rem;
+    width: 60%;
+    margin: 0 20% 0 20%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding: 5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: transform 300ms linear, opacity 300ms linear,border-bottom 300ms linear;
+}
+/*.link-portofolio p{
+    transition: border-bottom 300ms linear;
+}*/
