@@ -1,3 +1,2 @@
 # Godspeed-website
-On-going project
-Postponed for now until after exams in June.
+Started the project as a request but the person managing the tattoo shop dropped out of the project
